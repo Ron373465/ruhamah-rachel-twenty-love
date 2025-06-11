@@ -38,12 +38,12 @@ const WishesSection = () => {
                 <Stethoscope className="w-10 h-10" />
               </div>
               <h3 className="font-dancing text-4xl font-semibold text-center mb-8 text-blue-800">
-                Your Medical Journey
+                Your Dream to Become a Doctor
               </h3>
               <p className="text-xl leading-relaxed text-blue-700 text-center max-w-2xl mx-auto">
-                We believe with all our hearts that you will become the best oncology doctor. Your compassion, 
-                dedication, and brilliant mind will bring hope and healing to countless lives. The world needs 
-                doctors like you - ones who care deeply and never give up on their patients.
+                We believe with all our hearts that you will achieve your dream of becoming an oncology doctor. 
+                Your compassion, dedication, and brilliant mind will help you succeed in your studies and one day 
+                bring hope and healing to countless lives. Keep pursuing your dreams - the world needs future doctors like you!
               </p>
             </div>
           </div>
