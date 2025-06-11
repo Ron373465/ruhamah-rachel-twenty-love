@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Sparkles, Star, Heart, Gift2 } from 'lucide-react';
+import { Sparkles, Star, Heart, Gift } from 'lucide-react';
 
 const WishesSection = () => {
   const [selectedWish, setSelectedWish] = useState(0);
@@ -25,7 +25,7 @@ const WishesSection = () => {
       color: "from-blue-400 to-indigo-500"
     },
     {
-      icon: Gift2,
+      icon: Gift,
       title: "Endless Joy",
       wish: "May every day bring you reasons to smile, moments to cherish, and people who love you just as much as you deserve to be loved.",
       color: "from-emerald-400 to-teal-500"
