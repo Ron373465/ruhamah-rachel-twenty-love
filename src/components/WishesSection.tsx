@@ -42,26 +42,29 @@ const WishesSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Wish cards */}
           <div className="space-y-4">
-            {wishes.map((wish, index) => (
-              <div
-                key={index}
-                onClick={() => setSelectedWish(index)}
-                className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
-                  selectedWish === index
-                    ? 'bg-white shadow-xl border-2 border-purple-300'
-                    : 'bg-white/50 hover:bg-white/80 border border-purple-100'
-                }`}
-              >
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${wish.color} flex items-center justify-center text-white`}>
-                    <wish.icon className="w-6 h-6" />
+            {wishes.map((wish, index) => {
+              const IconComponent = wish.icon;
+              return (
+                <div
+                  key={index}
+                  onClick={() => setSelectedWish(index)}
+                  className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+                    selectedWish === index
+                      ? 'bg-white shadow-xl border-2 border-purple-300'
+                      : 'bg-white/50 hover:bg-white/80 border border-purple-100'
+                  }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${wish.color} flex items-center justify-center text-white`}>
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-purple-800">
+                      {wish.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-purple-800">
-                    {wish.title}
-                  </h3>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Selected wish display */}
@@ -69,7 +72,10 @@ const WishesSection = () => {
             <div className={`absolute inset-0 bg-gradient-to-br ${wishes[selectedWish].color} opacity-5`} />
             <div className="relative z-10">
               <div className={`w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r ${wishes[selectedWish].color} flex items-center justify-center text-white animate-heart-beat`}>
-                {wishes[selectedWish].icon && <wishes[selectedWish].icon className="w-10 h-10" />}
+                {(() => {
+                  const SelectedIconComponent = wishes[selectedWish].icon;
+                  return <SelectedIconComponent className="w-10 h-10" />;
+                })()}
               </div>
               <h3 className="font-dancing text-3xl font-semibold text-center mb-6 text-purple-800">
                 {wishes[selectedWish].title}
