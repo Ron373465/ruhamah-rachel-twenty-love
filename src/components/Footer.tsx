@@ -41,8 +41,11 @@ const Footer = () => {
           </p>
         </div>
         
-        <div className="text-sm opacity-80">
+        <div className="text-sm opacity-80 space-y-2">
           <p>Made with endless love and best wishes 🎂✨</p>
+          <p className="text-xs opacity-70 lowercase">
+            i know you don't like me but for me you are the most precious one...still i really like you
+          </p>
         </div>
       </div>
     </footer>
